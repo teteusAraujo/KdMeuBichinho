@@ -1,0 +1,107 @@
+main{
+    display: flex;
+    width: 100%;
+}
+.section-welcome{
+    display: flex;
+    flex:2;
+    height: 100vh;
+    margin-left: 0px;
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+    min-width: 500px;
+    height: 100vh;
+    position: relative;
+}
+.register .header{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--neutral-dark-color);
+    padding: 15px 30px;
+}
+.icone-link .icone{
+    margin: 0px;
+}
+.form{
+    width:70%;
+    font-style: normal;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center; 
+}
+.welcome{
+    width: 70%;
+}
+form{
+    width:100%;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center; 
+}
+.nameUser,.phone,.password,.street{
+    width: 100%;
+}
+.part{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;  
+    justify-content: space-between;  
+}
+.mail, .complement{
+    width: 60%;
+}
+.cep, .number{
+    width: 37%;
+}
+.link{
+    height:50px;
+}
+
+@media (max-width: 1024px) and (min-width: 601px){
+    .welcome{
+        width: 100%;
+    }
+}
+@media (max-width:768px) {
+    main{
+        flex-direction: column;
+        max-width: 100vw;
+    }
+    .section-welcome{
+        flex: none;
+        min-width: 100%;
+        height: 90px;
+        display: none;
+    }
+    .welcome{
+        display:none;
+    }
+    .register{
+        flex: none;
+        min-width: 100%;
+    }
+    .register .header{
+        top: 0px;
+        left: 0px;
+    }
+    .form{
+        width:70%;
+        top: 64px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    
+}

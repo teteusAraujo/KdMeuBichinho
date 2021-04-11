@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="../images/favicon.svg">
+    <title>KdMeuBichinho? - Entrar</title>
+</head>
+<body>
+    <main>
+        <section class="image-aside bg-secondary">
+            <img src="../images/login.svg" alt="Uma pessoa verificando credenciais" class="img-login">
+        </section>
+        <section class="content">
+            <header class="header">
+                <a href="../index.html" class="icone-link">
+                    <img class="logo" src="../images/logo-black.svg" alt="logo da página">
+                </a>
+            </header>
+            <section class="form-login">
+                <div class="form">
+                    <h1>Entre</h1>
+                    <p>Você é sempre bem-vindo(a) por aqui!</p>
+                    <form action="">
+                        <input 
+                            type="email"
+                            id="email"
+                            name="email" placeholder="E-mail"
+                            required >
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Senha"
+                            required > 
+                        <button
+                            id="submit"
+                            class="btn-primary"
+                            type="submit"
+                            >Entrar
+                        </button>
+                        <div class="links">
+                            <a href="./recovery.html">Esqueci minha senha</a>
+                            <a href="./signup.html">Cadastrar usuário</a>
+                        </div>                      
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>
