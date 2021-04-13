@@ -1,0 +1,33 @@
+.content{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.form{
+    padding: 20px;
+    max-width: 90vw;
+    text-align: center;
+}
+label, input[type=text], input[type=file]{
+    border: 1px solid var(--gray-light-color);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+input[type=radio], input[type=checkbox] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+
+input[type=radio]:checked + label,
+input[type=checkbox]:checked + label{
+    color: white;
+    background: var(--primary-light-color);
+    border: none;
+    box-shadow: 5px 5px 10px 0px rgba(50, 50, 50, 0.3);
+}
