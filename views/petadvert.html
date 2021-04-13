@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/petadvert.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="../images/favicon.svg">
+    <script src="https://kit.fontawesome.com/5660cb5f80.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <title>KdMeuBichinho? - Novo anúncio</title> 
+</head>
+<body>
+    <header class="">
+        <nav class="menu" id="menu">
+            <a href="https://kdmeubichinho.github.io/">
+                <img src="https://kdmeubichinho.github.io/images/logo-black.svg" alt="Logo KdMeuBichinho" class="logo">
+            </a>
+            <input type="checkbox" id="bar">
+            <label for="bar" class="bars">&#9776;</label>
+            <ul class="">
+                <li><a href="https://kdmeubichinho.github.io/">Início</a></li>
+                <li><a href="https://kdmeubichinho.github.io/pages/petadvert.html">Anunciar</i></a></li>
+                <li><a href="https://kdmeubichinho.github.io/pages/signup.html">Cadastrar</a></li>
+                <li><button class="btn-primary" onclick="location.href='https://kdmeubichinho.github.io/pages/login.html'">Entrar</i></button></li>
+            </ul>  
+        </nav>
+    </header>
+    <main id="main">
+        <section class="content">
+            <div class="slogan">
+                <img src="../images/ad.svg" alt="Duas pessoas segurando uma lupa" class="img-home">
+                <h1 class="h1-secondary">#Novo Anúncio</h1>
+                <h2 class="h2-secondary">Nos conte o que aconteceu e te ajudaremos a resolver</h2>
+            </div>
+            <form class="form">
+
+                <p class="description"><strong>Qual é o animal?</strong></p>
+                <input type="radio" name="especie" id="cachorro" value="1">
+                <label for="cachorro">Cachorro</label>
+                <input type="radio" name="especie" id="gato" value="2">
+                <label for="gato">Gato</label>
+                <input type="radio" name="especie" id="passaro" value="3">
+                <label for="passaro">Pássaro</label>
+                <input type="radio" name="especie" id="roedor" value="4">
+                <label for="roedor">Roedor</label>
+                
+                <p class="description"><strong>O que aconteceu?</strong></p>
+                <input type="radio" name="evento" id="fugiu" value="1">
+                <label for="fugiu">Fugiu de Casa</label>
+                <input type="radio" name="evento" id="encontrado" value="2">
+                <label for="encontrado">Encontrei na rua</label>
+                <input type="radio" name="evento" id="doacao" value="3">
+                <label for="doacao">Quero doar</label>
+            
+                <p class="description"><strong>Sexo</strong></p>
+                <input type="radio" name="sexo" id="macho" value="MACHO">
+                <label for="macho">Macho</label>
+                <input type="radio" name="sexo" id="femea" value="FEMEA">
+                <label for="femea">Fêmea</label>
+                <input type="radio" name="sexo" id="indeterminado" value="NAO_IDENTIFICADO">
+                <label for="indeterminado">Não identificado</label>
+                
+                <p class="description"><strong>Idade</strong></p>
+                <input type="radio" name="idade" id="filhote" value="FILHOTE">
+                <label for="filhote">Filhote</label>
+                <input type="radio" name="idade" id="adulto" value="ADULTO">
+                <label for="adulto">Adulto</label>
+
+                <p class="description"><strong>Porte</strong></p>
+                <input type="radio" name="porte" id="pequeno" value="PEQUENO">
+                <label for="pequeno">Pequeno</label>
+                <input type="radio" name="porte" id="medio" value="MEDIO">
+                <label for="medio">Médio</label>
+                <input type="radio" name="porte" id="grande" value="GRANDE">
+                <label for="grande">Grande</label>
+
+                <p class="description"><strong>Outros</strong></p>
+                <input type="checkbox" name="outros" id="castrado" value="castrado">
+                <label for="castrado">Castrado</label>
+                <input type="checkbox" name="outros" id="vacinado" value="vacinado">
+                <label for="vacinado">Vacinado</label>
+
+                <p class="description"><strong>Adicione uma foto</strong></p>
+                <input id="photo" type="file" />
+                
+                <p class="description"><strong>Últimas perguntas</strong></p>
+                <div class="finalquestions">
+                    <input type="text" name="nome" id="nome" placeholder="Nome do animal (caso saiba)">
+                    <input type="text" name="cep" id="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="CEP (para rastreamento) *" required/> 
+                </div>
+                <button type="submit" class="btn-primary" id="anunciar">Anunciar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer" aria-placeholder="Topo" id="footer">
+        <img src="https://kdmeubichinho.github.io/images/icone-black.svg" alt="Icone do KdMeuBichinho" class="icone">
+        <div>
+            <a href="https://github.com/KdMeuBichinho" target="_blank"><strong>Colabore no Github do projeto.</strong></a>
+            <p>2020 Todos os direitos reservados.</p>
+        </div>
+        <a href="#main"><button class="btn-primary"><span class="footer-top-button"><i class="fas fa-chevron-up"></i></span></button></a>
+    </footer>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/petadvert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>
