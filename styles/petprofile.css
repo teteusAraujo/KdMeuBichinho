@@ -191,3 +191,24 @@ side-right .contact-section .contact {
     from {opacity: .4} 
     to {opacity: 1}
 }
+
+@media(max-width: 399px){
+    .side-right .input-size{
+        flex: 0;
+    }
+    .side-right .btn-size{
+        flex: 0;
+        margin-left: 3px;
+    }
+}
+  
+/* On smaller screens, decrease text size */
+@media(max-width: 768px){
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .prev, .next,.text {font-size: 11px}
+}
