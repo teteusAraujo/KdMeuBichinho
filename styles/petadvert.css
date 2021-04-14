@@ -31,3 +31,24 @@ input[type=checkbox]:checked + label{
     border: none;
     box-shadow: 5px 5px 10px 0px rgba(50, 50, 50, 0.3);
 }
+
+.finalquestions{
+    display: flex;
+    flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.description{
+    text-align: center;
+}
+    
+input[type="file"]{
+    max-width: 80%;
+    margin-right: 10px;
+}
+form a:hover{
+    border-bottom: none;
+}
