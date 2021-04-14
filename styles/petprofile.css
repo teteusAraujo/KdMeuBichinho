@@ -39,3 +39,155 @@ body{
 .description * {
     margin: 5px 0px;
 }
+side-right .contact-section .contact {
+    padding: 20px 25px;
+}
+.side-right .contact-section .contact * {
+    padding: 3px 0px;
+}
+.side-right .contact-section{
+    display: flex;
+    align-items: center;
+}
+.side-right .message {
+    padding: 30px 10px;
+}
+.side-right .box-message {
+    border: 1px solid var(--gray-light-color);
+    border-radius: var(--space);
+    padding: var(--space);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.side-right .box-text-message {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+.side-right .box-text-message .style-message{
+    line-height: 25px;
+    word-break: break-all;
+}
+.side-right .box-text-message .style-message span:last-child {
+    font-size: 0.8em;
+    color: var(--gray-color);
+    background-color: var(--neutral-dark-color);
+    padding: 0px 10px;
+    border-radius: var(--space);
+}
+.side-right .box-text-message .style-message span:first-child {
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    padding: 3px 8px;
+    border-radius: var(--space);
+    margin-right: 5px;
+    font-size: 1.0em;
+
+}
+.side-right .btn-size {
+    padding: 10px 15px;
+    flex: 1;
+    max-width: 60px;
+    margin-left: 10px;
+}
+.side-right .text-message {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+}
+.side-right .input-size {
+    flex: 1;
+}
+
+
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow*/
+/* Slideshow container */
+.slideshow-container {
+    /* position: relative; */
+    margin: auto;
+}
+
+.slideshow-container .mySlides {
+    /* height: 500px; */
+    /* position: relative; */
+    overflow: hidden;
+}
+
+.slideshow-container .mySlides img {
+    width: 100%;
+    /* position: absolute; */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+#nome_animal{
+    font-weight: bold;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
