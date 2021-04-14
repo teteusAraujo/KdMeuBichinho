@@ -52,3 +52,9 @@ input[type="file"]{
 form a:hover{
     border-bottom: none;
 }
+
+@media (min-width: 550px){
+    main{
+        display: flex;
+    }
+}
