@@ -18,6 +18,21 @@ Realizar conexão entre interesses comuns das pessoas e os animais através de s
 
  <img src="./images/TelaPrincipal.png" alt="Tela Principal"> 
 
+ # 👷 Como rodar
+
+```bash
+# Clonar o repositório
+git clone https://github.com/teteusAraujo/KdMeuBichinho.git
+
+# Entrar numa IDE de sua preferência 
+
+# Executar o servidor ou usar um puglin que criar um servidor
+
+```
+
+Feito isso, abra o seu navegador e acesse `http://localhost:5500/`
+ou em uma porta de sua preferência.
+
  ## 🤔 Como contribuir <br/>
 
 - Faça um fork desse repositório; <br/>
