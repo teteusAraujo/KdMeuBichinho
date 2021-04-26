@@ -15,7 +15,7 @@
     --neutral-light-color: rgba(0, 0, 0, 0.05);
     --neutral-dark-color: rgba(0, 0, 0, 0.12);
     --space: 10px;
-    --time: .4s;
+    --time: 0.3s;
 }
 html, body{
     max-width: 100%;
@@ -60,9 +60,9 @@ p{
     color: var(--gray-color)
 }
 button{
-    padding: 10px 30px;
-    font-size: 1em;
-    font-style: normal;
+    padding: 10px;
+    font-weight: 100;
+    font-size: 0.875rem;
     text-align: center;
     color: var(--white-color);
     border-radius: 100px;
@@ -71,16 +71,19 @@ button{
     cursor: pointer;
     transition: background-color var(--time);    
 }
+.fa-search {
+    color: #ffffff;
+}
 a{
     font-style: normal;
     font-weight: 400;
     text-decoration: none;
     color: var(--primary-light-color);
-    transition: all var(--time);
+    transition: all ease var(--time);
 }
 a:hover{
     color: var(--primary-color);
-    font-weight: bold;
+    transform: scale3d(1.02, 1.02, 1.02);
 }
 a:not(a > img:first-child){
     font-weight: 500;
@@ -300,7 +303,6 @@ i{
 .menu ul li > a:hover{
     /* padding: 20px; */
     color: var(--gray-dark-color);
-    font-weight: bold;
     border-bottom: 2px solid var(--gray-dark-color);
 }
 .menu-logout{
