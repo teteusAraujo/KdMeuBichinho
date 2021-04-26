@@ -65,8 +65,8 @@ button{
     font-size: 0.875rem;
     text-align: center;
     color: var(--white-color);
-    border-radius: 100px;
-    width: fit-content;
+    border-radius: 10px;
+    max-width: 350px;
     width: -moz-fit-content;
     cursor: pointer;
     transition: background-color var(--time);    

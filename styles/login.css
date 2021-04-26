@@ -52,11 +52,16 @@ main{
 }
 .links{
     display: flex;
-    flex-direction: column;
-    justify-content: right;
+    justify-content: flex-end;
 }
-.links a{
-        width:160px;
+.links span {
+    width: fit-content;
+}
+a {
+    border: none !important;
+}
+.sign-in-btn {
+    max-width: 350px;
 }
 @media (min-width: 769px){
     main{
