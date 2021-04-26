@@ -65,7 +65,7 @@ button{
     font-size: 0.875rem;
     text-align: center;
     color: var(--white-color);
-    border-radius: 10px;
+    border-radius: 50px;
     max-width: 350px;
     width: -moz-fit-content;
     cursor: pointer;
@@ -88,7 +88,6 @@ a:hover{
 a:not(a > img:first-child){
     font-weight: 500;
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
     /*border: 1px solid red;*/
 }
 input:not([type="checkbox"]){
