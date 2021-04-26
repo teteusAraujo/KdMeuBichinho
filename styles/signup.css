@@ -8,8 +8,11 @@ main{
     height: 100vh;
     margin-left: 0px;
     margin-top: 0px;
-    align-items: center;
     justify-content: center;
+}
+.icone-link {
+    position: absolute;
+    margin: 20px 40px;
 }
 .register{
     display: flex;
@@ -41,6 +44,7 @@ main{
 }
 .welcome{
     width: 70%;
+    
 }
 form{
     width:100%;
