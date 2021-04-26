@@ -12,6 +12,11 @@ main{
     border-bottom: 1px solid var(--neutral-dark-color);
     padding: 15px 30px;
 }
+.icone-link {
+    position: absolute;
+    margin: 20px 40px;
+    z-index: 1;
+}
 .content{
     display: flex;
     flex-direction: column;
