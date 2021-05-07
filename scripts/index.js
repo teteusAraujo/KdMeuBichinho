@@ -19,9 +19,45 @@ btnBuscar.addEventListener("click", () => {
     buscaAnimais(0);
     ampliaIndex();
 })
+
 btnAplicarFiltro.addEventListener("click", () => {
     buscaAnimais(0);
 });
+
 function capturaAnuncio(idAnuncio) {
     localStorage.setItem("idAnuncio", idAnuncio)
+}
+
+function ampliaIndex(){
+    imgSearch.classList.add("display-none")
+    sectionSearch.classList.add("section-search-animation");
+    sectionResult.classList.remove("display-none");
+    footer.classList.remove("display-none")
+}
+
+function atualizaFiltros(){
+    let cep = document.querySelector("#cep").value;
+    let idEspecie = document.querySelector("#especie").value
+    let idCategoria = document.querySelector("#categoria").value
+    let sexo = document.querySelector("#sexo").value
+    let idade = document.querySelector("#idade").value
+    let porte = document.querySelector("#porte").value
+
+    queryFilter = ""
+    cep = cep.substring(0,5)
+
+    if(cep) queryFilter += `cep=${cep}&`;
+    if(idEspecie != 0) queryFilter += `idEspecie=${idEspecie}&`;
+    if(idCategoria != 0) queryFilter += `idCategoria=${idCategoria}&`;
+    if(sexo) queryFilter += `sexo=${sexo}&`;
+    if(idade) queryFilter += `classificacaoEtaria=${idade}&`;
+    if(porte) queryFilter += `porte=${porte}&`;
+    queryFilter += `status=ATIVO&`;
+    queryFilter += `size=20&`;
+
+}
+
+function selecionaPagina(pagina){
+    pagina --
+    buscaAnimais(pagina)
 }
