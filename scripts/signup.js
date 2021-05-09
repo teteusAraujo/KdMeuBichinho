@@ -20,3 +20,34 @@ phone.addEventListener("keypress", function (){
         phone.value = phone.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
 
 });
+
+cep.addEventListener("keypress", function (){ 
+    if(cep.value.length == 5)
+        cep.value = cep.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do cep. 
+});
+cep.addEventListener("blur",()=>{
+    if(cep.value){
+        let newcep=formatnumber(cep.value)
+        fetch(`https://viacep.com.br/ws/${newcep}/json/`)
+        .then(res => res.json())
+        .then(local => {
+            street.value = local.logradouro
+            pessoa.cep = local.cep
+            pessoa.bairro = local.bairro
+            pessoa.localidade = local.localidade
+            pessoa.uf = local.uf
+            pessoa.ibge = local.ibge
+            pessoa.ddd = local.ddd
+            console.log(local)
+        })
+    }   
+});
+function constroiPessoa(){
+    pessoa.logradouro = street.value
+    pessoa.complemento = complement.value
+    pessoa.celular=formatnumber(phone.value);
+    pessoa.email=mail.value;
+    pessoa.nome=nameUser.value;
+    pessoa.numeroResidencial=number.value;
+    pessoa.senha=password.value;
+}
