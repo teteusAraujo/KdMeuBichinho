@@ -42,6 +42,7 @@ cep.addEventListener("blur",()=>{
         })
     }   
 });
+
 function constroiPessoa(){
     pessoa.logradouro = street.value
     pessoa.complemento = complement.value
@@ -50,4 +51,12 @@ function constroiPessoa(){
     pessoa.nome=nameUser.value;
     pessoa.numeroResidencial=number.value;
     pessoa.senha=password.value;
+}
+
+function verificaCamposObrigatorios(){
+    if(cep.value && pessoa.nome && pessoa.email && pessoa.logradouro && pessoa.numeroResidencial && pessoa.celular && pessoa.senha){
+        return true
+    }else{
+        return false
+    }
 }
