@@ -60,3 +60,35 @@ function verificaCamposObrigatorios(){
         return false
     }
 }
+
+button.addEventListener("click",(e)=>{
+    e.preventDefault();
+    constroiPessoa();
+    
+    if(verificaCamposObrigatorios()){
+        fetch(`${BASE_URL_SERVER}${API_PESSOA}`,{
+            method: "POST",
+            headers: { "Content-Type":"application/json"},
+            body: JSON.stringify(pessoa)
+        })
+        .then(res => res.json())
+        .then(() => {
+            //window.alert('Usuário cadastrado com sucesso!')
+            Swal.fire({
+                icon: 'success',
+                title: 'Usuário cadastrado com sucesso!',
+                text: 'Você será redirecionado para a tela de login.'
+            })
+            setTimeout(function(){location.href = `${BASE_URL_CLIENT}${CLIENT_LOGIN}`;}, 3000);
+        })
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+    }else{
+        //window.alert('Campos obrigatórios não preenchidos')
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'Você não preencheu todos os campos obrigatórios marcados com *'
+          })
+    }
+});
