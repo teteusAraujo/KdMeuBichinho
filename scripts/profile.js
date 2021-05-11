@@ -30,4 +30,15 @@ function buscaPessoa(){
             pessoa.celular = `${res.celular}`;
             inserePessoaNaTela(pessoa)
         })
+
+}
+
+function inserePessoaNaTela(pessoa){
+    nameLabel.textContent = `${pessoa.nome}`;
+    mailLabel.textContent = `Email: ${pessoa.email}`
+    zipCodeLabel.textContent = `Cep: ${pessoa.cep}`;
+    streetLabel.textContent = `Rua: ${pessoa.logradouro}`;
+    numberLabel.textContent = `Numero: ${pessoa.numeroResidencial}`;
+    complementLabel.textContent = `Complemento: ${pessoa.complemento}`;
+    phoneLabel.textContent = `Celular: ${pessoa.celular}`;
 }
