@@ -11,3 +11,23 @@ const complementLabel = document.querySelector('#complement');
 const cardsArea = document.querySelector('#cards_area')
 
 const pessoa = {};
+
+function buscaPessoa(){
+    fetch(`${BASE_URL_SERVER}${API_PESSOA}${queryEmail}${email}`)
+        .then(res => res.json())
+        .then(res => {
+            pessoa.nome = `${res.nome}`;
+            pessoa.email = `${res.email}`;
+            pessoa.cep = `${res.cep}`;
+            pessoa.logradouro = `${res.logradouro}`;
+            pessoa.complemento = `${res.complemento}`;
+            pessoa.bairro = `${res.bairro}`;
+            pessoa.localidade = `${res.localidade}`;
+            pessoa.uf = `${res.uf}`;
+            pessoa.ibge = `${res.ibge}`;
+            pessoa.ddd = `${res.ddd}`;
+            pessoa.numeroResidencial = `${res.numeroResidencial}`;
+            pessoa.celular = `${res.celular}`;
+            inserePessoaNaTela(pessoa)
+        })
+}
