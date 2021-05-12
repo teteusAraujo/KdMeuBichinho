@@ -42,3 +42,73 @@ function inserePessoaNaTela(pessoa){
     complementLabel.textContent = `Complemento: ${pessoa.complemento}`;
     phoneLabel.textContent = `Celular: ${pessoa.celular}`;
 }
+
+function buscaAnuncios(email){
+    cardsArea.innerHTML = `        
+    <div class="loading-area">
+        <p>Buscando</p>
+        <img src="../images/loading.gif" alt="" class="loading-image">
+    </div>
+`
+
+    fetch(`${BASE_URL_SERVER}${API_ANUNCIO}${queryPessoaEmail}${email}`)
+        .then(res => res.json())
+        .then(anuncio => {
+            cardsArea.innerHTML = `<label class="filters">Meus anuncios</label>`
+            if(!anuncio.empty){
+                for(let anuncioRecebido of anuncio.content){
+                    const dataCriado = new Date(Date.parse(anuncioRecebido.dataCriacao))
+                    let dataCriadoFormatada = adicionaZero((dataCriado.getDate())) + "." + ((dataCriado.getMonth() + 1)) + "." + dataCriado.getFullYear() + " - " + (dataCriado.getHours() + 3) + ":" + adicionaZero(dataCriado.getMinutes()); 
+                    let dataEncerradoFormatada
+
+                    if(anuncioRecebido.dataEncerramento){
+                        const dataEncerrado = new Date(Date.parse(anuncioRecebido.dataEncerramento))
+                        dataEncerradoFormatada = adicionaZero((dataEncerrado.getDate())) + "." + ((dataEncerrado.getMonth() + 1)) + "." + dataEncerrado.getFullYear() + " - " + (dataEncerrado.getHours() + 3) + ":" + adicionaZero(dataEncerrado.getMinutes()); 
+                    }else{
+                        dataEncerradoFormatada = ""
+                    }
+
+                    let buttonAnuncio;
+                    let classButton;
+
+                    if(anuncioRecebido.status == "Ativo"){
+                        buttonAnuncio = "Encerrar"
+                        classButton = "btn-secondary"
+                    }else if(anuncioRecebido.status == "Inativo"){
+                        buttonAnuncio = "Ativar"
+                        classButton = "btn-invert-secondary"
+                    }
+
+                    cardsArea.innerHTML += 
+                        `
+                        <div class="res-card">
+                            <a href="${BASE_URL_CLIENT}pages/petprofile.html" class="res-card-link" onclick="capturaAnuncio(${anuncioRecebido.idAnuncio})">
+                                <div class="res-card-img">
+                                    <img src="${anuncioRecebido.idAnimal.fotos.caminho}" alt="">
+                                </div>
+                                <div class="res-card-txt">
+                                    <p>${anuncioRecebido.idAnimal.nome}</p>
+                                    <p>${anuncioRecebido.idAnimal.bairro}</p>
+                                    <p>${anuncioRecebido.idAnimal.localidade}</p>
+                                </div>
+                                <div class="res-card-tag">
+                                    <span class="tag">${anuncioRecebido.idCategoria.classificacao}</span>     
+                                </div>
+                            </a>
+                            <div class="res-card-status">
+                                <p>Criado em: <span>${dataCriadoFormatada}</span></p>
+                                <p>Encerrado em: <span>${dataEncerradoFormatada}</span></p>
+                                <p>Situação: <span>${anuncioRecebido.status}</span></p>   
+                                <button class="${classButton}" onclick="atualizaStatus(${anuncioRecebido.idAnuncio})">${buttonAnuncio}</button>
+                            </div>
+                        </div>
+                        `
+                }
+            }else{
+                cardsArea.innerHTML +=
+                    `<div>
+                        <p>Opss, parece que você ainda não possui nenhum anuncio por aqui <i class="fas fa-ghost"></i></p>
+                    </div>`
+            }
+        })
+}
