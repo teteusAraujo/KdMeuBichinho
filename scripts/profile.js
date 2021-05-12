@@ -112,3 +112,14 @@ function buscaAnuncios(email){
             }
         })
 }
+
+const btnEdit = document.getElementById('edit');
+const btnCancel = document.getElementById('cancel');
+const btnSave = document.getElementById('save');
+const modal = document.querySelector('.modal-container');
+const nameEdit = document.querySelector('#name_edit');
+const zipCodeEdit = document.querySelector('#zip_code_edit');
+const streetEdit = document.querySelector('#street_edit');
+const numberEdit = document.querySelector('#number_edit');
+const phoneEdit = document.querySelector('#phone_edit');
+const complementEdit = document.querySelector('#complement_edit');
