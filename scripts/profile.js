@@ -133,6 +133,28 @@ btnEdit.addEventListener('click', () => {
     complementEdit.value = pessoa.complemento;
     modal.classList.add('show');
 })
+
 btnCancel.addEventListener('click', () => {
     modal.classList.remove('show');
 })
+
+zipCodeEdit.addEventListener("keypress", function (){ 
+    if(zipCodeEdit.value.length == 5)
+        zipCodeEdit.value = zipCodeEdit.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do cep. 
+});
+phoneEdit.addEventListener("keypress", function (){ 
+    if(phoneEdit.value.length == 0)
+        phoneEdit.value = '(' + phoneEdit.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
+    if(phoneEdit.value.length == 3)
+        phoneEdit.value = phoneEdit.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 2 números) o script irá inserir mais um parênteses, fechando assim o código de área.
+    if(phoneEdit.value.length == 10)
+        phoneEdit.value = phoneEdit.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
+});
+
+function verificaCamposObrigatorios(){
+    if(pessoa.nome && pessoa.cep && pessoa.logradouro && pessoa.numeroResidencial && pessoa.celular){
+        return true
+    } else {
+        return false
+    }
+}
