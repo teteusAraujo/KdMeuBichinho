@@ -158,3 +158,37 @@ function verificaCamposObrigatorios(){
         return false
     }
 }
+
+function constroiPessoa(){
+    pessoa.nome = nameEdit.value;
+    pessoa.cep = zipCodeEdit.value;
+    pessoa.logradouro = streetEdit.value;
+    pessoa.numeroResidencial = numberEdit.value;
+    pessoa.complemento = complementEdit.value;
+    pessoa.celular = formatnumber(phoneEdit.value);
+}
+
+btnSave.addEventListener('click',(e) => {
+    e.preventDefault()
+    constroiPessoa();
+
+    if(verificaCamposObrigatorios()){
+        editaPessoa(pessoa)
+        //window.alert('Usuário editado com sucesso!')
+        Swal.fire({
+            icon: 'success',
+            title: 'Usuário editado com sucesso!',
+            timer: 1500
+          })
+        
+        setTimeout(function(){modal.classList.remove('show');}, 1200);
+        
+    }else{
+        //window.alert('Campos obrigatórios não preenchidos')
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'Você não preencheu todos os campos obrigatórios marcados com *'
+          })
+    }
+} )
