@@ -123,3 +123,16 @@ const streetEdit = document.querySelector('#street_edit');
 const numberEdit = document.querySelector('#number_edit');
 const phoneEdit = document.querySelector('#phone_edit');
 const complementEdit = document.querySelector('#complement_edit');
+
+btnEdit.addEventListener('click', () => {
+    nameEdit.value = pessoa.nome;
+    zipCodeEdit.value = pessoa.cep;
+    streetEdit.value = pessoa.logradouro;
+    numberEdit.value = pessoa.numeroResidencial;
+    phoneEdit.value = pessoa.celular;
+    complementEdit.value = pessoa.complemento;
+    modal.classList.add('show');
+})
+btnCancel.addEventListener('click', () => {
+    modal.classList.remove('show');
+})
