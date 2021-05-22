@@ -192,3 +192,49 @@ btnSave.addEventListener('click',(e) => {
           })
     }
 } )
+
+zipCodeEdit.addEventListener("blur", ()=>{
+    if(zipCodeEdit.value && zipCodeEdit.value.length == 9){
+        let newcep=formatnumber(zipCodeEdit.value)
+        fetch(`https://viacep.com.br/ws/${newcep}/json/`)
+        .then(res => res.json())
+        .then(local => {
+            streetEdit.value = local.logradouro
+            pessoa.cep = local.cep
+            pessoa.logradouro = local.logradouro
+            pessoa.bairro = local.bairro
+            pessoa.localidade = local.localidade
+            pessoa.uf = local.uf
+            pessoa.ibge = local.ibge
+            pessoa.ddd = local.ddd
+        })
+    }   
+});
+function editaPessoa(pessoa){
+    fetch(`${BASE_URL_SERVER}${API_PESSOA}${email}`,{
+        method: "PUT",
+        headers: { "Content-Type":"application/json"},
+        body: JSON.stringify(pessoa)
+    })
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+
+    inserePessoaNaTela(pessoa)
+}
+function atualizaStatus(idAnuncio){
+    fetch(`${BASE_URL_SERVER}${API_ANUNCIO}${API_ATUALIZA_STATUS}${idAnuncio}`,{
+        method: "PUT",
+        headers: { "Content-Type":"application/json"}
+    })
+    .then(() => {
+        buscaAnuncios(email)
+    })
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+
+}
+
+buscaPessoa()
+buscaAnuncios(email)
