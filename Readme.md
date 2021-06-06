@@ -18,6 +18,13 @@ Realizar conexão entre interesses comuns das pessoas e os animais através de s
 
  <img src="./images/TelaPrincipal.png" alt="Tela Principal"> 
 
+
+## 🖼 Tela de anúncio dos animais que estão perdidos ou procurando um novo lar
+
+<br>
+<img src="./images/telaanuncio.png" alt="Tela Principal"> 
+<br>
+
  # 👷 Como rodar
 
 ```bash
