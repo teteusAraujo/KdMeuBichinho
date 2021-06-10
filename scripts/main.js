@@ -52,3 +52,17 @@ const menuLogout = `
             </li>
         </ul>
     `
+const footerPages = `
+    <img src="https://kdmeubichinho.github.io/images/icone-black.svg" alt="Icone do KdMeuBichinho" class="icone">
+    <div>
+        <a href="https://github.com/KdMeuBichinho" target="_blank"><strong>Colabore no Github do projeto.</strong></a>
+        <p>2020 Todos os direitos reservados.</p>
+    </div>
+    <a href="#main"><button class="btn-primary"><span class="footer-top-button"><i class="fas fa-chevron-up"></i></span></button></a>
+`
+function fazlogout(){
+    localStorage.removeItem('email')
+    localStorage.removeItem('token')
+    verificaToken()
+    redirecionamentoIndex()
+}
