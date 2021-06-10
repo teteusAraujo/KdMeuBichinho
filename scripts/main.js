@@ -31,3 +31,24 @@ const menuLogout = `
         <li><a href="${BASE_URL_CLIENT}pages/signup.html">Cadastrar <!--<i class="fas fa-user-plus"></i>--></a></li>
         <li><button class="btn-primary" onclick="location.href='${BASE_URL_CLIENT}pages/login.html'">Entrar  <!--<i class="fas fa-sign-in-alt">--></i></button></li>
     </ul>  
+    `
+    const menuLogin = `
+        <a href="${BASE_URL_CLIENT}">
+            <img src="${BASE_URL_CLIENT}images/logo-black.svg" alt="Logo KdMeuBichinho" class="logo">
+        </a>
+        <input type="checkbox" id="bar">
+        <label for="bar" class="bars">&#9776;</label> 
+        <ul>
+            <li><a href="${BASE_URL_CLIENT}">Início </a></li>
+            <li><a href="${BASE_URL_CLIENT}pages/petadvert.html">Anunciar</a></li>
+            <li>
+                <div class="dropdown">
+                    <i class="fas fa-user dropbtn"></i>
+                    <div class="dropdown-content">
+                        <a href="${BASE_URL_CLIENT}pages/profile.html">Meus anuncios</a>
+                        <a href="#" id="logout" onclick="fazlogout()">Sair</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    `
