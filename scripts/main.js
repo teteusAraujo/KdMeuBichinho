@@ -66,3 +66,23 @@ function fazlogout(){
     verificaToken()
     redirecionamentoIndex()
 }
+
+function verificaRota(rota){
+    if(!token){
+        for(rotaBloqueada of URL_BLOCK){
+            if(rotaBloqueada == rota){
+                window.alert('Você precisa estar logado para fazer anuncios')
+                location.href = BASE_URL_CLIENT + CLIENT_LOGIN
+            }
+        }
+    }
+}
+function verificaToken(){
+    if(localStorage.getItem('token')){
+        menu.innerHTML = menuLogin;
+        token = true;
+    }else{
+        menu.innerHTML = menuLogout;
+        token = false;
+    }
+}
