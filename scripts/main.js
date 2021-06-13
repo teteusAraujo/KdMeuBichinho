@@ -86,3 +86,19 @@ function verificaToken(){
         token = false;
     }
 }
+
+function redirecionamentoIndex(){
+    location.href = BASE_URL_CLIENT; 
+}
+
+function redirecionamento(url){
+    location.href = url; 
+}
+
+function capturaAnuncio(idAnuncio) {
+    localStorage.setItem("idAnuncio", idAnuncio)
+}
+
+function formatnumber(number){
+    return number.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/ ^a-zA-Z]/gi, '')
+}
