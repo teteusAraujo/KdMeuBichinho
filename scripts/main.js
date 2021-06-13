@@ -102,3 +102,18 @@ function capturaAnuncio(idAnuncio) {
 function formatnumber(number){
     return number.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/ ^a-zA-Z]/gi, '')
 }
+
+function adicionaZero(numero){
+    if (numero <= 9) 
+        return "0" + numero;
+    else
+        return numero; 
+}
+
+function atualizaFooter(){
+    footer.innerHTML = footerPages;
+}
+
+function capturaPagina(){
+    localStorage.setItem("page", location.href)
+}
