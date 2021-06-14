@@ -117,3 +117,18 @@ function atualizaFooter(){
 function capturaPagina(){
     localStorage.setItem("page", location.href)
 }
+
+atualizaFooter()
+verificaToken()
+verificaRota(location.href)
+capturaPagina()
+
+const urll = "https://viacep.com.br/ws/14810125/json/"
+
+fetch(urll).then(function(response) {
+    response.json().then(function(data) {
+      console.log(data);
+    });
+  }).catch(function(err) {
+    console.error('Failed retrieving information', err);
+  });
