@@ -54,3 +54,53 @@ function atualizaMensagens(){
             messageScroll.scrollTop = messageScroll.scrollHeight - messageScroll.clientHeight;
         })
 }
+
+function enviaMensagem(){
+    const mensagem = {}
+    const idAnuncio = {}
+    const idPessoa = {}
+
+    verificaToken()
+    if(token){
+        if(message.value){
+            idAnuncio.idAnuncio = id;
+            idPessoa.email = email;
+    
+            mensagem.dataMensagem = new Date();
+            mensagem.dataMensagem.setHours(mensagem.dataMensagem.getHours() - 3);
+    
+            mensagem.idAnuncio = idAnuncio;
+            mensagem.idPessoa = idPessoa;
+            mensagem.mensagem = message.value;
+    
+            fetch(`${BASE_URL_SERVER}${API_MENSAGEM}`,{
+                method: "POST",
+                headers: { "Content-Type":"application/json"},
+                body: JSON.stringify(mensagem)
+            })
+            .then(res => res.json())
+            .then(() => {
+                atualizaMensagens()
+                message.value = ""
+            })
+            .then(res => console.log(res))
+            .catch(err => console.log(err))  
+        } else {
+            //window.alert('Campos obrigatórios não preenchidos')
+            Swal.fire({
+                icon: 'info',
+                title: 'Oops...',
+                text: 'Você não escreveu nenhuma mensagem para enviar.'
+              })
+        }
+    } else {
+        //window.alert('Você precisa estar logado para enviar mensagens')
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Você precisa estar logado para enviar mensagens!',
+            footer: '<a href="./login.html">Entrar na minha conta</a>'
+          })
+    } 
+}
+
