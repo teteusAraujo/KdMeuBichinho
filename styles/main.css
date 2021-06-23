@@ -86,7 +86,6 @@ a:not(a > img:first-child){
     font-weight: 500;
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
-    /*border: 1px solid red;*/
 }
 input:not([type="checkbox"]){
     border: 1px solid var(--gray-dark-color);
@@ -346,7 +345,7 @@ i{
     padding: 20px;
     text-align: center;
 }
-/* Dropdown Button */
+
 .dropbtn {
     background-color: var(--neutral-dark-color);
     padding: 16px;
@@ -355,12 +354,12 @@ i{
     transition: background-color .3s;
     cursor: pointer;
 }
-/* The container <div> - needed to position the dropdown content */
+
 .dropdown {
     position: relative;
     display: inline-block;
 }
-/* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -371,22 +370,22 @@ i{
     z-index: 1;
 
 }
-/* Links inside the dropdown */
+
 .dropdown-content a {
     color: var(--gray-color);
     padding: 20px;
     text-decoration: none;
     display: block;
 }
-/* Change color of dropdown links on hover */
+
 .dropdown-content a:hover {
     background-color: #ddd;
 }
-/* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
-/* Change the background color of the dropdown button when the dropdown content is shown */
+
 .dropdown:hover .dropbtn {
     background-color: var(--gray-light-color);
 }
