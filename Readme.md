@@ -1,5 +1,5 @@
 <h4 align="center"> 
-	🚧  Kd meu bichinho? A plataforna ainda sem encontra em construção ✔️ 🚧
+	🚧  Kd meu bichinho? A plataforna ainda se encontra em fase de construção ✔️ 🚧
 </h4>
 
 ## 💻 Sobre o projeto
