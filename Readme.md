@@ -1,3 +1,7 @@
+<h4 align="center"> 
+	🚧  Kd meu bichinho? A plataforna ainda se encontra em fase de construção ✔️ 🚧
+</h4>
+
 ## 💻 Sobre o projeto
 
 :shipit: KdMeuBichinho? - O projeto surgiu com a missão de ajudar as pessoas que querem encontrar seu melhor amigo :dog: :cat: :rabbit:  que foi perdido ou encontrar alguém que está doando. 
