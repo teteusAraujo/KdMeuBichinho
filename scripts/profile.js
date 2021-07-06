@@ -174,7 +174,6 @@ btnSave.addEventListener('click',(e) => {
 
     if(verificaCamposObrigatorios()){
         editaPessoa(pessoa)
-        //window.alert('Usuário editado com sucesso!')
         Swal.fire({
             icon: 'success',
             title: 'Usuário editado com sucesso!',
