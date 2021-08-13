@@ -10,6 +10,13 @@ const vacinado = document.querySelector("#vacinado")
 const nome = document.querySelector("#nome");
 const cep = document.querySelector("#cep");
 
+const anuncio = {};
+const animal = {};
+const fotos = {};
+const especie = {};
+const categoriaAnuncio = {};
+const pessoa = {};
+
 function atualizaMensagens(){
     var messageScroll = document.getElementById('message_area');
     
