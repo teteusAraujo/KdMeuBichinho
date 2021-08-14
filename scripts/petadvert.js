@@ -17,6 +17,19 @@ const especie = {};
 const categoriaAnuncio = {};
 const pessoa = {};
 
+let firebaseConfig = {
+    apiKey: " ",
+    authDomain: " ",
+    projectId: " ",
+    storageBucket: "",
+    messagingSenderId: " ",
+    appId: " ",
+    measurementId: " "
+};
+
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
 function atualizaMensagens(){
     var messageScroll = document.getElementById('message_area');
     
