@@ -294,7 +294,6 @@ ul{
 @media(min-width: 400px) and (max-width: 768px){
     .res-card{
         width: 150px;
-        /* flex-direction: row; */
     }
     .res-card-img{
         width: 100%;
