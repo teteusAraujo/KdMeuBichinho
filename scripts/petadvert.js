@@ -72,3 +72,21 @@ function atualizaMensagens(){
             messageScroll.scrollTop = messageScroll.scrollHeight - messageScroll.clientHeight;
         })
 }
+
+function constroiAnuncio(){
+    for(let especieFormFor of especieForm){
+        if(especieFormFor.checked) especie.idEspecie = especieFormFor.value;
+    }
+    for(let categoriaFormFor of categoria){
+        if(categoriaFormFor.checked) categoriaAnuncio.idCategoria = categoriaFormFor.value;
+    }
+    for(let sexoFormFor of sexo){
+        if(sexoFormFor.checked) animal.sexo = sexoFormFor.value;
+    }
+    for(let idadeFormFor of idade){
+        if(idadeFormFor.checked) animal.classificacaoEtaria = idadeFormFor.value;
+    }
+    for(let porteFormFor of porte){
+        if(porteFormFor.checked) animal.porte = porteFormFor.value;
+    }
+}

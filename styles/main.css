@@ -297,7 +297,6 @@ i{
     color: var(--gray-color);
 }
 .menu ul li > a:hover{
-    /* padding: 20px; */
     color: var(--gray-dark-color);
     font-weight: bold;
     border-bottom: 2px solid var(--gray-dark-color);
