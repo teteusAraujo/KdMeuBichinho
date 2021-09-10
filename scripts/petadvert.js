@@ -90,3 +90,17 @@ function constroiAnuncio(){
         if(porteFormFor.checked) animal.porte = porteFormFor.value;
     }
 }
+
+animal.castrado=false
+    animal.vacinado=false
+    if(castrado.checked) animal.castrado = true;
+    if(vacinado.checked) animal.vacinado = true;
+
+    animal.nome = nome.value;
+    pessoa.email = localStorage.email;
+    animal.especie = especie;
+
+    anuncio.idCategoria = categoriaAnuncio;
+    anuncio.idPessoa = pessoa;
+    anuncio.idAnimal = animal;
+    anuncio.dataCriacao = new Date();
