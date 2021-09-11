@@ -1,6 +1,9 @@
 <h4 align="center"> 
 	🚧  Kd meu bichinho? A plataforna ainda se encontra em fase de construção ✔️ 🚧
 </h4>
+ 
+ <img src="./images/logokd.png" alt="Logo do KdMeuBichinho"> 
+
 
 ## 💻 Sobre o projeto
 
