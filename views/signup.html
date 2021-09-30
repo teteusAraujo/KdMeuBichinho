@@ -1,61 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KdMeuBichinho? - Criar Conta</title>
-    <link rel="stylesheet" href="../styles/main.css"/>
-    <link rel="stylesheet" href="../styles/signup.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/signup.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/svg" href="../images/favicon.svg">
 </head>
+
 <body>
     <main>
-        <section class="bg-secondary section-welcome">            
+        <section class="bg-secondary section-welcome">
             <img src="../images/welcome.svg" alt="welcome" class="welcome">
         </section>
         <section id="register" class="register">
             <header class="header">
                 <a href="../index.html" class="icone-link">
-                    <img class="logo" alt="icone" src="../images/logo-black.svg">
+                    <img class="logo" alt="" src="../images/logo-black.svg">
                 </a>
             </header>
             <section id="form" class="form">
                 <h1 id="h1" class="h1">Criar conta</h1>
                 <p>Realize seu cadastro e comece sua jornada por aqui.</p>
-                <form>
-                    <div class="part">
-                        <input type="text" name="Nome e Sobrenome" id="nameUser" class="nameUser" placeholder="Nome" value="" required/>
-                    </div>
-                    <div class="part">
-                        <input type="email" id="mail" class="mail" placeholder="E-mail: user@email.com" required/>
-                        <input type="text" name="cep" id="cep" class="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="CEP" value="" required/>
-                    </div>
-                    <div class="part">
-                        <input type="text" name="street" id="street" class="street" placeholder="Rua" value="" required/>
-                    </div>
-                    <div class="part">
-                        <input type="text" name="number" id="number" class="number" placeholder="Número" value="" required/>
-                        <input type="text" name="complement" id="complement" class="complement" placeholder="Complemento" value=""/>
-                    </div>
-                    <div class="part">
-                        <input type="tel" name="phone" id="phone" class="phone" pattern="\([0-9]{2}\) [9]{1}[0-9]{4}-[0-9]{4}" placeholder="Celular" value="" autocomplete="off" required/>
-                    </div>
-                    <div class="part">
-                        <input type="password" name="senha" id="password" class="password" placeholder="Senha">
-                    </div>
-                    <div>
-                        <button type="submit" id="signup" class="btn-primary">Cadastrar</button>
-                    </div>
-                    <div id="link" class="link">
-                        <a href="./login.html">Clique aqui caso já tenha uma conta</a>
-                    </div>  
-                </form>    
-            </section>          
-        </section> 
+
+                <form method="post" action>
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+
+                        <div class="part">
+                            <label for="nameUser">Nome</label>
+                            <input type="text" name="Nome e Sobrenome" id="nameUser" class="nameUser" placeholder="Nome"
+                                value="" required />
+                        </div>
+
+                        <div class="part">
+                            <label for="mail">E-mail</label>
+                            <input type="email" id="mail" class="mail" placeholder="E-mail: user@email.com" required />
+                        </div>
+
+                        <div class="part">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" name="phone" id="phone" class="phone"
+                                pattern="\([0-9]{2}\) [9]{1}[0-9]{4}-[0-9]{4}" placeholder="Celular" value=""
+                                autocomplete="off" required />
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <div class="part">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" id="cep" class="cep" pattern="[0-9]{5}-[0-9]{3}"
+                                placeholder="CEP" value="" required />
+                        </div>
+
+                        <div class="part">
+                            <label for="street">Rua</label>
+                            <input type="text" name="street" id="street" class="street" placeholder="Rua" value=""
+                                required />
+                        </div>
+
+                        <div class="part">
+                            <label for="number">Número</label>
+                            <input type="text" name="number" id="number" class="number" placeholder="Número" value=""
+                                required />
+
+                            <label for="complement">Complemento</label>
+                            <input type="text" name="complement" id="complement" class="complement"
+                                placeholder="Complemento" value="" />
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Seguranca</legend>
+
+                        <div class="part">
+                            <label for="password">Senha</label>
+                            <input type="password" name="senha" id="password" class="password" placeholder="Senha">
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" id="signup" class="btn-primary">Cadastrar</button>
+                </form>
+
+                <div id="link" class="link">
+                    <a href="./login.html">Já possui uma conta?</a>
+                </div>
+            </section>
+        </section>
     </main>
     <script src="../scripts/main.js"></script>
     <script src="../scripts/signup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
+
 </html>
