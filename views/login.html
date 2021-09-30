@@ -31,16 +31,29 @@
                 <div class="form">
                     <h1>Entre</h1>
                     <p>Você é sempre bem-vindo(a) por aqui!</p>
-                    <form action="">
-                        <input type="email" id="email" name="email" placeholder="E-mail" required>
-                        <input type="password" id="password" name="password" placeholder="Senha" required>
-                        <button id="submit" class="btn-primary" type="submit">Entrar
-                        </button>
-                        <div class="links">
-                            <a href="./recovery.html">Esqueci minha senha</a>
-                            <a href="./signup.html">Cadastrar usuário</a>
-                        </div>
+
+                    <form action="" method="post">
+                        <fieldset>
+                            <legend>Login</legend>
+
+                            <div class="form-item">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                            </div>
+
+                            <div class="form-item">
+                                <label for="password">Senha</label>
+                                <input type="password" id="password" name="password" placeholder="Senha" required>
+                            </div>
+
+                            <button id="submit" class="btn-primary" type="submit">Entrar</button>
+                        </fieldset>
                     </form>
+
+                    <div class="links">
+                        <a href="./recovery.html">Esqueci minha senha</a>
+                        <a href="./signup.html">Cadastrar usuário</a>
+                    </div>
                 </div>
             </section>
         </section>
