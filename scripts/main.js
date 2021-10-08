@@ -1,5 +1,5 @@
 const BASE_URL_CLIENT = "http://localhost:5500/";
-const BASE_URL_SERVER = "";
+const BASE_URL_SERVER = "https://kdmeubichinho-app.herokuapp.com/";
 
 const API_ANUNCIO_BUSCA = "anuncio/busca?";
 const API_FOTO = "storage/upload";
@@ -76,6 +76,7 @@ function verificaRota(rota){
         }
     }
 }
+
 function verificaToken(){
     if(localStorage.getItem('token')){
         menu.innerHTML = menuLogin;
@@ -103,10 +104,7 @@ function formatnumber(number){
 }
 
 function adicionaZero(numero){
-    if (numero <= 9) 
-        return "0" + numero;
-    else
-        return numero; 
+    return  (numero <= 9) ? "0" + numero : numero; 
 }
 
 function atualizaFooter(){
