@@ -86,7 +86,7 @@ function constroiAnuncio(){
     for(let porteFormFor of porte){
         if(porteFormFor.checked) animal.porte = porteFormFor.value;
     }
-}
+
 
 animal.castrado=false
     animal.vacinado=false
@@ -101,3 +101,6 @@ animal.castrado=false
     anuncio.idPessoa = pessoa;
     anuncio.idAnimal = animal;
     anuncio.dataCriacao = new Date();
+
+    anuncio.dataCriacao.setHours(anuncio.dataCriacao.getHours() - 3);
+}
