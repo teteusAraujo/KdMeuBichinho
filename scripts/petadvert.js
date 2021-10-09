@@ -50,6 +50,26 @@ function uploadImageFirebase(image){
     })
 }
 
+photo.addEventListener("change", ()=>{
+    //uploadFile(photo.files[0])
+    uploadImageFirebase(photo.files[0])
+})
+const uploadFile = (file) => {
+   
+    const fd = new FormData();
+    fd.append("file", file)
+    fetch(`${BASE_URL_SERVER}${API_FOTO}`,{
+        method: "POST",
+        body: fd
+    })
+    .then(res => res.text())
+    .then(res => {
+        fotos.caminho=res;
+        animal.fotos=fotos;
+    })
+    .catch(err => console.log(err))
+}
+
 function constroiAnuncio(){
     for(let especieFormFor of especieForm){
         if(especieFormFor.checked) especie.idEspecie = especieFormFor.value;
@@ -66,7 +86,7 @@ function constroiAnuncio(){
     for(let porteFormFor of porte){
         if(porteFormFor.checked) animal.porte = porteFormFor.value;
     }
-}
+
 
 animal.castrado=false
     animal.vacinado=false
@@ -81,3 +101,6 @@ animal.castrado=false
     anuncio.idPessoa = pessoa;
     anuncio.idAnimal = animal;
     anuncio.dataCriacao = new Date();
+
+    anuncio.dataCriacao.setHours(anuncio.dataCriacao.getHours() - 3);
+}
