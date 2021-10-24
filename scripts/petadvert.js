@@ -104,3 +104,11 @@ animal.castrado=false
 
     anuncio.dataCriacao.setHours(anuncio.dataCriacao.getHours() - 3);
 }
+
+function verificaCamposObrigatorios(){
+    if(especie.idEspecie && categoriaAnuncio.idCategoria && animal.sexo && animal.classificacaoEtaria && animal.porte && cep.value && photo.files[0]){
+        return true
+    }else{
+        return false
+    }
+}
