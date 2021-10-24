@@ -142,6 +142,7 @@ zipCodeEdit.addEventListener("keypress", function (){
     if(zipCodeEdit.value.length == 5)
         zipCodeEdit.value = zipCodeEdit.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do cep. 
 });
+
 phoneEdit.addEventListener("keypress", function (){ 
     if(phoneEdit.value.length == 0)
         phoneEdit.value = '(' + phoneEdit.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
@@ -183,7 +184,6 @@ btnSave.addEventListener('click',(e) => {
         setTimeout(function(){modal.classList.remove('show');}, 1200);
         
     }else{
-        //window.alert('Campos obrigatórios não preenchidos')
         Swal.fire({
             icon: 'info',
             title: 'Oops...',
@@ -209,6 +209,7 @@ zipCodeEdit.addEventListener("blur", ()=>{
         })
     }   
 });
+
 function editaPessoa(pessoa){
     fetch(`${BASE_URL_SERVER}${API_PESSOA}${email}`,{
         method: "PUT",
@@ -221,6 +222,7 @@ function editaPessoa(pessoa){
 
     inserePessoaNaTela(pessoa)
 }
+
 function atualizaStatus(idAnuncio){
     fetch(`${BASE_URL_SERVER}${API_ANUNCIO}${API_ATUALIZA_STATUS}${idAnuncio}`,{
         method: "PUT",

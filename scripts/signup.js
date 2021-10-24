@@ -25,6 +25,7 @@ cep.addEventListener("keypress", function (){
     if(cep.value.length == 5)
         cep.value = cep.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do cep. 
 });
+
 cep.addEventListener("blur",()=>{
     if(cep.value){
         let newcep=formatnumber(cep.value)
@@ -73,7 +74,6 @@ button.addEventListener("click",(e)=>{
         })
         .then(res => res.json())
         .then(() => {
-            //window.alert('Usuário cadastrado com sucesso!')
             Swal.fire({
                 icon: 'success',
                 title: 'Usuário cadastrado com sucesso!',
@@ -84,7 +84,6 @@ button.addEventListener("click",(e)=>{
         .then(res => console.log(res))
         .catch(err => console.log(err))
     }else{
-        //window.alert('Campos obrigatórios não preenchidos')
         Swal.fire({
             icon: 'info',
             title: 'Oops...',
