@@ -112,3 +112,22 @@ function verificaCamposObrigatorios(){
         return false
     }
 }
+
+anunciar.addEventListener("click", (e) =>{
+    e.preventDefault()
+    constroiAnuncio()
+
+    if(verificaCamposObrigatorios()){
+        let newCep = formatnumber(cep.value)    
+        fetch(`https://viacep.com.br/ws/${newCep}/json/`)
+            .then(res => res.json())
+            .then(local => {
+                animal.logradouro = local.logradouro
+                animal.cep = local.cep
+                animal.bairro = local.bairro
+                animal.localidade = local.localidade
+                animal.uf = local.uf
+                animal.ibge = local.ibge
+                animal.ddd = local.ddd
+            })
+})
