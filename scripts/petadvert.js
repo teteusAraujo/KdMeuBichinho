@@ -112,3 +112,8 @@ function verificaCamposObrigatorios(){
         return false
     }
 }
+
+anunciar.addEventListener("click", (e) =>{
+    e.preventDefault()
+    constroiAnuncio()
+})
