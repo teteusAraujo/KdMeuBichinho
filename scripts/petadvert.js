@@ -129,5 +129,21 @@ anunciar.addEventListener("click", (e) =>{
                 animal.uf = local.uf
                 animal.ibge = local.ibge
                 animal.ddd = local.ddd
+            }).then(() => {
+                fetch(`${BASE_URL_SERVER}${API_ANUNCIO}`,{
+                    method: "POST",
+                    headers: { "Content-Type":"application/json"},
+                    body: JSON.stringify(anuncio)
+                }) .then(res => res.json())
+                .then(res => capturaAnuncio(res.idAnuncio))
+                .then(() => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Anúncio cadastrado com sucesso!',
+                    })
+                    setTimeout(function(){location.href = `${BASE_URL_CLIENT}${CLIENT_PETPROFILE}`}, 1800);
+                })
+                .then(res => console.log(res))
+                .catch(err => console.log(err))
             })
 })
