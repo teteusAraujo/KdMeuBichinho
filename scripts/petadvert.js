@@ -134,7 +134,8 @@ anunciar.addEventListener("click", (e) =>{
                     method: "POST",
                     headers: { "Content-Type":"application/json"},
                     body: JSON.stringify(anuncio)
-                }) .then(res => res.json())
+                })
+                .then(res => res.json())
                 .then(res => capturaAnuncio(res.idAnuncio))
                 .then(() => {
                     Swal.fire({
@@ -146,4 +147,11 @@ anunciar.addEventListener("click", (e) =>{
                 .then(res => console.log(res))
                 .catch(err => console.log(err))
             })
+        }else{
+            Swal.fire({
+                icon: 'info',
+                title: 'Oops...',
+                text: 'Você não preencheu todos os campos obrigatórios marcados com *'
+              })
+        }
 })
