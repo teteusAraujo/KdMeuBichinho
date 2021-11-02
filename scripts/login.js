@@ -42,7 +42,6 @@ function enviar() {
                     }
                 } else if (status == 401) {
                     localStorage.clear()
-                        //alert("Usuário ou senha inválido")
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
@@ -52,7 +51,6 @@ function enviar() {
                     passwordField.value = ""
                 } else {
                     localStorage.clear()
-                        //alert("Ocorreu um erro ao logar, tente novamente mais tarde")
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
