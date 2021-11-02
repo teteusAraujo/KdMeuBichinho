@@ -38,6 +38,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-self: center; 
+    margin-top: 2em
 }
 .welcome{
     width: 70%;
@@ -49,6 +50,15 @@ form{
     flex-direction: column;
     flex-wrap: wrap;
     align-self: center; 
+}
+.part input {
+    border: 1.8px solid var(--gray-color);
+}
+.part input::placeholder {
+    color: var(--gray-color);
+}
+.contact, .address, .pass {
+    border: none;
 }
 .nameUser,.phone,.password,.street{
     width: 100%;
@@ -68,6 +78,14 @@ form{
 }
 .link{
     height:50px;
+}
+#login-link {
+    border: none;
+    color: var(--primary-light-color);
+}
+
+#login-link:hover {
+    color: var(--primary-dark-color)
 }
 
 @media (max-width: 1024px) and (min-width: 601px){
