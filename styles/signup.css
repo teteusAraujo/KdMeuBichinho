@@ -2,6 +2,7 @@ main{
     display: flex;
     width: 100%;
 }
+
 .section-welcome{
     display: flex;
     flex:2;
@@ -11,6 +12,7 @@ main{
     align-items: center;
     justify-content: center;
 }
+
 .register{
     display: flex;
     flex-direction: column;
@@ -20,6 +22,7 @@ main{
     height: 100vh;
     position: relative;
 }
+
 .register .header{
     width: 100%;
     position: absolute;
@@ -29,9 +32,11 @@ main{
     border-bottom: 1px solid var(--neutral-dark-color);
     padding: 15px 30px;
 }
+
 .icone-link .icone{
     margin: 0px;
 }
+
 .form{
     width:70%;
     font-style: normal;
@@ -39,9 +44,11 @@ main{
     flex-wrap: wrap;
     align-self: center; 
 }
+
 .welcome{
     width: 70%;
 }
+
 form{
     width:100%;
     font-style: normal;
@@ -50,9 +57,11 @@ form{
     flex-wrap: wrap;
     align-self: center; 
 }
+
 .nameUser,.phone,.password,.street{
     width: 100%;
 }
+
 .part{
     display: flex;
     width: 100%;
@@ -60,12 +69,15 @@ form{
     flex-wrap: nowrap;  
     justify-content: space-between;  
 }
+
 .mail, .complement{
     width: 60%;
 }
+
 .cep, .number{
     width: 37%;
 }
+
 .link{
     height:50px;
 }
@@ -75,6 +87,7 @@ form{
         width: 100%;
     }
 }
+
 @media (max-width:768px) {
     main{
         flex-direction: column;

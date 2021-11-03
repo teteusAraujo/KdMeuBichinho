@@ -3,6 +3,7 @@ main{
     flex-direction: column;
     height: 100vh;
 }
+
 .content .header{
     width: 100%;
     position: absolute;
@@ -12,6 +13,7 @@ main{
     border-bottom: 1px solid var(--neutral-dark-color);
     padding: 15px 30px;
 }
+
 .content{
     display: flex;
     flex-direction: column;
@@ -21,16 +23,20 @@ main{
     flex: 1;
     min-width: 100%;
 }
+
 .form{
     width: 100%;
 }
+
 .image-aside{
     display: none;
 }
+
 .img-login{
     width: 60%;
     display: none;
 }
+
 .form-login{
     display: flex;
     flex-direction: column;
@@ -38,18 +44,22 @@ main{
     align-items: center;
     width: 70%;
 }
+
 .form-login form{
     display: flex;
     flex-direction: column;
 }
+
 .link-button:hover{
     border-bottom-style: none;
 }
+
 .links{
     display: flex;
     flex-direction: column;
     justify-content: right;
 }
+
 .links a{
         width:160px;
 }
@@ -75,6 +85,7 @@ main{
         display: block;
     }
 }
+
 @media (max-width: 1024px){
     .img-login{
         width: 80%;
