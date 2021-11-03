@@ -36,6 +36,8 @@
 
                         <div class="part">
                             <input type="email" id="mail" class="mail" placeholder="E-mail: user@email.com" required />
+                            <input type="text" name="cep" id="cep" class="cep" pattern="[0-9]{5}-[0-9]{3}"
+                                placeholder="CEP" value="" required />
                         </div>
 
                         <div class="part">
@@ -46,10 +48,6 @@
                     </fieldset>
 
                     <fieldset class="address">
-                        <div class="part">
-                            <input type="text" name="cep" id="cep" class="cep" pattern="[0-9]{5}-[0-9]{3}"
-                                placeholder="CEP" value="" required />
-                        </div>
 
                         <div class="part">
                             <input type="text" name="street" id="street" class="street" placeholder="Rua" value=""
