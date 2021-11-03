@@ -30,7 +30,6 @@ function buscaPessoa(){
             pessoa.celular = `${res.celular}`;
             inserePessoaNaTela(pessoa)
         })
-
 }
 
 function inserePessoaNaTela(pessoa){
@@ -60,17 +59,14 @@ function buscaAnuncios(email){
                     const dataCriado = new Date(Date.parse(anuncioRecebido.dataCriacao))
                     let dataCriadoFormatada = adicionaZero((dataCriado.getDate())) + "." + ((dataCriado.getMonth() + 1)) + "." + dataCriado.getFullYear() + " - " + (dataCriado.getHours() + 3) + ":" + adicionaZero(dataCriado.getMinutes()); 
                     let dataEncerradoFormatada
-
                     if(anuncioRecebido.dataEncerramento){
                         const dataEncerrado = new Date(Date.parse(anuncioRecebido.dataEncerramento))
                         dataEncerradoFormatada = adicionaZero((dataEncerrado.getDate())) + "." + ((dataEncerrado.getMonth() + 1)) + "." + dataEncerrado.getFullYear() + " - " + (dataEncerrado.getHours() + 3) + ":" + adicionaZero(dataEncerrado.getMinutes()); 
                     }else{
                         dataEncerradoFormatada = ""
                     }
-
                     let buttonAnuncio;
                     let classButton;
-
                     if(anuncioRecebido.status == "Ativo"){
                         buttonAnuncio = "Encerrar"
                         classButton = "btn-secondary"
@@ -101,8 +97,7 @@ function buscaAnuncios(email){
                                 <p>Situação: <span>${anuncioRecebido.status}</span></p>   
                                 <button class="${classButton}" onclick="atualizaStatus(${anuncioRecebido.idAnuncio})">${buttonAnuncio}</button>
                             </div>
-                        </div>
-                        `
+                        </div>                        `
                 }
             }else{
                 cardsArea.innerHTML +=

@@ -5,11 +5,13 @@
     align-items: center;
     padding: 10px;
 }
+
 .form{
     padding: 20px;
     max-width: 90vw;
     text-align: center;
 }
+
 label, input[type=text], input[type=file]{
     border: 1px solid var(--gray-light-color);
     border-radius: 10px;
@@ -18,11 +20,12 @@ label, input[type=text], input[type=file]{
     display: inline-block;
     cursor: pointer;
 }
+
 input[type=radio], input[type=checkbox] {
     position: absolute;
     visibility: hidden;
     display: none;
-  }
+}
 
 input[type=radio]:checked + label,
 input[type=checkbox]:checked + label{
@@ -49,6 +52,7 @@ input[type="file"]{
     max-width: 80%;
     margin-right: 10px;
 }
+
 form a:hover{
     border-bottom: none;
 }

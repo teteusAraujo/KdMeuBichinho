@@ -54,7 +54,6 @@ function atualizaFiltros(){
     if(porte) queryFilter += `porte=${porte}&`;
     queryFilter += `status=ATIVO&`;
     queryFilter += `size=20&`;
-
 }
 
 function selecionaPagina(pagina){
@@ -63,7 +62,6 @@ function selecionaPagina(pagina){
 }
 
 function buscaAnimais(pagina){
-
     atualizaFiltros()
     cardsArea.innerHTML = `
         <div class="loading-area">
